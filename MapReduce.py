@@ -1,5 +1,5 @@
 from itertools import repeat, count, cycle, accumulate, chain, compress
-from itertools import dropwhile, takewhile, islice, pairwise
+from itertools import dropwhile, takewhile, islice
 from itertools import groupby as iter_groupby
 from itertools import permutations, product, combinations, zip_longest
 from functools import reduce
