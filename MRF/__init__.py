@@ -1,1 +1,1 @@
-from MapReduceFunctions import *
+from .MapReduceFunctions import *
