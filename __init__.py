@@ -1,1 +1,1 @@
-from MRF.MapReduceFunctions import *
+from .MRF.MapReduceFunctions import *
