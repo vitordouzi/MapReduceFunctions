@@ -19,9 +19,10 @@ def flat(iterable):
     return chain.from_iterable(iterable)
 def flat_map(func, iterable):
     return flat( map(func, iterable) )
-def batch(iterable, batch_size, fillvalue=None):
+def batch(iterable, batch_size):
     args = [iter(iterable)] * batch_size
-    return zip_longest(*args, fillvalue=fillvalue)
+    for batch in zip_longest(*args, fillvalue=None):
+        yield list(x for x in batch if x is not None)
 def mapValues(func, iterable):
     return map(lambda x: (x[0], func(x[1])), iterable)
 def mapKeys(func, iterable):
